@@ -101,7 +101,6 @@ elif method == A_STAR:
         # f-Score represents our current best guess as to how cheap a path could be from start to finish if it goes through n.
         # g-score is the cost of the cheapest path from start to n currently known.
         f = g = h = 0
-        neighbours = []
 
         # 'previous' is the node immediately preceding it on the cheapest path from start
         previous = None
@@ -109,6 +108,7 @@ elif method == A_STAR:
         def __init__(self, i, j):
             self.i = i
             self.j = j
+            self.neighbours = [] 
 
         def add_neighbours(self):  # adding neighbours
             i, j = self.i, self.j
